@@ -2,7 +2,7 @@
 Defining your device
 ####################################
 
-A Device Profile can be thought of as a template or as a type or classification of Device.  General characteristics about the type of Device, the data theses Devices provide, and how to command them is all provided in a Device Profile.  Other pages within these docs provide more details about a Device Profile and its purpose (see :doc:`../Ch-Metadata` to start).  It is typical that as part of the reference information setup sequence, the Device Service provides the Device Profiles for the types of Devices it manages.
+A Device Profile can be thought of as a template or as a type or classification of Device.  General characteristics about the type of Device, the data theses Devices provide, and how to command them is all provided in a Device Profile.  Other pages within these docs provide more details about a Device Profile and its purpose (see :doc:`../Ch-GettingStartedDeviceProfiles` to start).  It is typical that as part of the reference information setup sequence, the Device Service provides the Device Profiles for the types of Devices it manages.
 
 Adding a Device Profile
 -----------------------

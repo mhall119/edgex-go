@@ -14,7 +14,7 @@ A Device Profile can be added to EdgeX using the Metadata APIs directly, but the
 Anatomy of a Device Profile
 ===========================
 
-The Device Profile is composed of four primary sections: The summary of the device, the datatype definitions, the resources available to be ready or written to, and the commands that can be called. Below we will take a look at each of these sections individually, using the sample device profile from the SDK guide as our example.
+The Device Profile is composed of four primary sections: The summary of the device, the datatype definitions, the resources available to be ready or written to, and the commands that can be called. Below we will take a look at each of these sections individually, using the :download:`sample device profile from the SDK guide <random-generator-device.yaml>` as our example.
 
 --------------
 Device Summary
@@ -40,7 +40,7 @@ You can use as many `labels` as you like, and they can be any string you like. T
 Device Resources
 ----------------
 
-The `deviceResources` section is where you will define the types of data that will be used when reading or writing to these devices. These define the format, restrictions, and optionally transformations that need to be applied to data of that type. 
+The `deviceResources` section is where you will define the types of data that will be used when reading or writing to these devices. These define the format, restrictions, and optionally transformations that need to be applied to data of that type.
 
 Keep in mind that these datatypes can be used for different meanings, and so should be kept generic. For example, one `Temperature` type definition could be used for both `Water Temperature` and `Air Temperature` readings, as well as `Thermostat Setting` values.
 
@@ -49,7 +49,7 @@ Keep in mind that these datatypes can be used for different meanings, and so sho
     deviceResources:
         - name: "randomnumber"
           description: "generated random number"
-          attributes: 
+          attributes:
             { type: "randdom" }
           properties:
             value:
@@ -99,7 +99,7 @@ Commands are how EdgeX calls your device (via the Device Service) to retrieve da
 * **GET** commands are issued to a device or sensor to get a current value for a particular attribute on the device, such as the current temperature provided by a thermostat sensor, or the on/off status of a light.
 * **PUT** commands are issued to a device or sensor to change the current state or status of a device or one of its attributes, such as setting the speed in RPMs of a motor, or setting the brightness of a dimmer light.
 
-:: 
+::
 
     commands:
         - name: "Random"

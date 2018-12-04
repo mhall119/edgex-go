@@ -1,41 +1,35 @@
 name: "RandNum-Device"
-manufacturer: "Dell Technologies"
-model: "1"
+manufacturer: "EdgeX Foundry"
+model: "abc123"
 labels:
- - "random"
- - "test"
+    - "random"
+    - "test"
 description: "random number generator to simulate a device"
 
 deviceResources:
-    -   
-        name: "randomnumber"
-        description: "generated random number"
-        attributes:
-            { type: "randdom" }
-        properties:
-            value:
-                { type: "INT32", readWrite: "R", defaultValue: "0.00", minimum: "0.00", maximum: "100.00"  }
-            units:
-                { type: "String", readWrite: "R", defaultValue: "" }
+    - name: "randomnumber"
+      description: "generated random number"
+      attributes:
+        { type: "randdom" }
+      properties:
+        value:
+            { type: "INT32", readWrite: "R", defaultValue: "0.00", minimum: "0.00", maximum: "100.00"  }
+        units:
+            { type: "String", readWrite: "R", defaultValue: "" }
 
 resources:
-    -
-        name: "Random"
-        get:
-            -
-                { operation: "get", object: "randomnumber", property: "value", parameter: "Random" }
+    - name: "Random"
+      get:
+        - { operation: "get", object: "randomnumber", property: "value", parameter: "Random" }
 
 commands:
-  -
-    name: "Random"
+  - name: "Random"
     get:
         path: "/api/v1/device/{deviceId}/Random"
         responses:
-          -
-            code: "200"
-            description: ""
-            expectedValues: ["Random"]
-          -
-            code: "503"
-            description: "service unavailable"
-            expectedValues: []
+            - code: "200"
+              description: ""
+              expectedValues: ["Random"]
+            - code: "503"
+              description: "service unavailable"
+              expectedValues: []

@@ -10,6 +10,7 @@ To get started you need to obtain EdgeX Foundry either as a User or as a Develop
    Ch-GettingStartedUsers
    Ch-GettingStartedDevelopers
    Ch-GettingStartedSDK
+   Ch-GettingStartedDeviceProfiles
    Ch-GettingStartedHybrid
    Ch-GettingStartedUsersNexus
   
