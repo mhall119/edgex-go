@@ -8,7 +8,7 @@ What is a Device Profile?
 
 A Device Profile describes the capabilities of a model or class of devices in a way that EdgeX services understand. A typical profile will define the datatypes that the device uses, the values that the device can povide, and commands that can be called against the device for reading values or triggering actions. Every Device that EdgeX is made aware of must be associated with a Device Profile. It's possible, even likely, that you will have more than one Device deployed that uses the same Profile.
 
-A Device Profile can be added to EdgeX using the Metadata APIs directly, but they are also commonly added automatically by a Device Service if that service is designed to handle only a specific set of devices. For example, the GrovePi Device Service used by the Community Devkit is designed to work only with the GrovePi sensor devices, and so it provides a Device Profile that will be automatically installed when that device service is started. Conversely, the MQTT Device Service can handle any type of device that uses MQTT, and so you would need to add your device profiles yourself when using this device service.
+A Device Profile can be added to EdgeX using the Metadata APIs directly, but they are also commonly added automatically by a Device Service if that service is designed to handle only a specific set of devices. For example, the `GrovePi Device Service <https://github.com/edgexfoundry/device-grove-c/>`_ used by the `Community Devkit <https://www.edgexfoundry.org/devkits/community-devkit/>`_ is designed to work only with the GrovePi sensor devices, and so it provides a `Device Profile <https://github.com/edgexfoundry/device-grove-c/blob/master/res/Grove_Device.yaml>`_ that will be automatically installed when that device service is started. Conversely, the `MQTT Device Service <https://github.com/edgexfoundry/device-mqtt-go>`_ can handle any type of device that uses MQTT, and so you would need to add your device profiles yourself when using this device service.
 
 ===========================
 Anatomy of a Device Profile
@@ -63,9 +63,11 @@ Like the `name` property in the profile summary, the `name` of the deviceResourc
 
 **TODO**: What are `attributes` and when do they get used?
 
-**TODO**: When/where are units used?
-
 **TODO**: Why do these have `readWrite` properties? What does that do?
+
+**TODO**: What other keys are available for property value? (size, word, offset, etc defined in PropertyValue.go)
+
+**TODO**: When/where are units used?
 
 ---------
 Resources
